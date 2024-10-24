@@ -31,8 +31,8 @@ export class ModalComponent {
     this.modalService.open(content, { centered: true });
   }
 
-  addPost(newPost: Partial<iPost>) {
-    console.log(newPost);
-    // this.postSvc.createPost(this.newPost.value)
-  }
+  // addPost(newPost: Partial<iPost>) {
+  //   console.log(newPost);
+  //   // this.postSvc.createPost(this.newPost.value)
+  // }
 }
