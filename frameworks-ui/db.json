@@ -57,5 +57,20 @@
       "id": 8
     }
   ],
-  "posts": []
+  "posts": [
+    {
+      "title": "Nemo ut dolor quidem",
+      "description": "Magni dolore aut pos",
+      "userid": 5,
+      "email": "mozuf@mailinator.com",
+      "id": 1
+    },
+    {
+      "title": "Quo ea veniam fuga",
+      "description": "Unde repudiandae tot",
+      "userid": 5,
+      "email": "mozuf@mailinator.com",
+      "id": 2
+    }
+  ]
 }

@@ -1,10 +1,42 @@
 <form [formGroup]="newPost">
   <div class="mb-3">
     <label for="title">Add a post title:</label>
-    <input id="title" class="form-control" type="text" />
+    <input
+      formControlName="title"
+      id="title"
+      class="form-control"
+      type="text"
+    />
   </div>
   <div class="mb-3">
     <div><label for="description">Add post description:</label></div>
-    <textarea class="form-control" name="" id="description"></textarea>
+    <textarea
+      formControlName="description"
+      type="text"
+      class="form-control"
+      name=""
+      id="description"
+    ></textarea>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <button type="button" class="btn btn-success" (click)="addPost()">
+        Add new post
+      </button>
+    </div>
+    <ng-container *ngIf="message">
+      <div class="col-6">
+        <div
+          [ngClass]="{
+            'alert-success': isSuccess,
+            'alert-danger': !isSuccess
+          }"
+          class="alert p-1 text-center"
+          role="alert"
+        >
+          {{ message }}
+        </div>
+      </div>
+    </ng-container>
   </div>
 </form>

@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { AuthService } from '../../auth/auth.service';
 import { iUser } from '../../interfaces/iuser';
 import { UserService } from '../../services/user.service';
+import { iPost } from '../../interfaces/ipost';
+import { PostService } from '../../services/post.service';
 
 @Component({
   selector: 'app-profile',
@@ -9,10 +11,16 @@ import { UserService } from '../../services/user.service';
   styleUrl: './profile.component.scss',
 })
 export class ProfileComponent {
-  constructor(private authSvc: AuthService, private userSvc: UserService) {}
+  constructor(
+    private authSvc: AuthService,
+    private userSvc: UserService,
+    private postSvc: PostService
+  ) {}
 
   user!: iUser;
   isChange: boolean = false;
+
+  posts!: iPost[];
 
   ngOnInit() {
     this.authSvc.user$.subscribe((user) => {
@@ -20,6 +28,9 @@ export class ProfileComponent {
         return;
       }
       this.user = user;
+      this.postSvc.getPostByUserId(this.user.id).subscribe((res) => {
+        this.posts = res;
+      });
     });
   }
 
@@ -31,6 +42,4 @@ export class ProfileComponent {
     this.userSvc.changePassword(user).subscribe();
     this.isChange = false;
   }
-
-  createPost() {}
 }

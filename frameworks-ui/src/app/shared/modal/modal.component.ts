@@ -30,9 +30,4 @@ export class ModalComponent {
   openVerticallyCentered(content: TemplateRef<any>) {
     this.modalService.open(content, { centered: true });
   }
-
-  // addPost(newPost: Partial<iPost>) {
-  //   console.log(newPost);
-  //   // this.postSvc.createPost(this.newPost.value)
-  // }
 }

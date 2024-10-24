@@ -56,5 +56,12 @@
         </ng-content>
       </modal-component>
     </div>
+    <ng-container *ngIf="posts">
+      <div class="row">
+        <div *ngFor="let post of posts" class="col-3">
+          {{ post.title }}
+        </div>
+      </div>
+    </ng-container>
   </div>
 </div>
