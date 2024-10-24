@@ -1,0 +1,57 @@
+<div>
+  <h1>Benvenuto {{ user.firstName }}</h1>
+  <div class="row">
+    <div class="col-12">
+      <h3>Your access data:</h3>
+    </div>
+    <div class="row py-1">
+      <div class="col-3">Email:</div>
+      <div class="col-9">{{ user.email }}</div>
+    </div>
+    <div class="row py-1">
+      <div class="col-3">Password:</div>
+      <div class="col-9 d-flex align-items-center">
+        <ng-container *ngIf="!isChange">
+          {{ user.password | crypto }}
+        </ng-container>
+        <ng-container *ngIf="isChange">
+          <input
+            type="password"
+            class="form-control"
+            [(ngModel)]="user.password"
+          />
+          <button
+            (click)="changePassword(user)"
+            class="btn btn-sm btn-warning ms-3"
+          >
+            Confirm
+          </button>
+        </ng-container>
+        <button class="btn btn-danger btn-sm ms-3" (click)="activateChange()">
+          {{ !isChange ? "Change" : "Undo" }}
+        </button>
+      </div>
+    </div>
+    <div class="col-12">
+      <h5>Your personal info:</h5>
+      <div class="row py-1">
+        <div class="col-3">First Name:</div>
+        <div class="col-9">{{ user.firstName }}</div>
+      </div>
+      <div class="row py-1">
+        <div class="col-3">Last Name:</div>
+        <div class="col-9">{{ user.lastName }}</div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <h5>Your post:</h5>
+    </div>
+    <div class="col-6 text-end">
+      <button class="btn btn-primary btn-sm" (click)="createPost()">
+        Add new post
+      </button>
+    </div>
+  </div>
+</div>

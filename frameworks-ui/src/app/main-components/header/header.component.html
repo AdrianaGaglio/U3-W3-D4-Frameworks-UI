@@ -1,0 +1,52 @@
+<header
+  class="px-5 d-flex flex-wrap align-items-center justify-content-between justify-content-md-between py-3 mb-4 border-bottom"
+>
+  <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+    <li>
+      <a
+        routerLink="/"
+        routerLinkActive="fw-medium"
+        class="nav-link px-2 link-secondary"
+        >Home</a
+      >
+    </li>
+    <li>
+      <a
+        routerLink="/profile"
+        routerLinkActive="fw-medium"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="nav-link px-2 link-secondary"
+        >Profile</a
+      >
+    </li>
+    <li>
+      <a
+        routerLink="/users"
+        routerLinkActive="fw-medium"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="nav-link px-2 link-secondary"
+        >Users</a
+      >
+    </li>
+  </ul>
+
+  <div class="col-md-3 text-end">
+    <ng-container *ngIf="!isLogged">
+      <a
+        routerLink="/auth/login"
+        type="button"
+        class="btn btn-outline-primary btn-sm me-2"
+        >Login</a
+      >
+      <a
+        routerLink="/auth/register"
+        type="button"
+        class="btn btn-success btn-sm"
+        >Sign-up</a
+      >
+    </ng-container>
+    <ng-container *ngIf="isLogged">
+      <button class="btn btn-danger btn-sm" (click)="logout()">Logout</button>
+    </ng-container>
+  </div>
+</header>

@@ -1,0 +1,61 @@
+{
+  "users": [
+    {
+      "email": "dypega@mailinator.com",
+      "firstName": "Yvonne",
+      "lastName": "Woodward",
+      "id": 1,
+      "password": "$2a$10$S.nODfwH5uKogg1nA.fFoukQFsFIfMPWuo/YGVG3NlDiGm6Exs9NW"
+    },
+    {
+      "email": "kezutah@mailinator.com",
+      "firstName": "Malik",
+      "lastName": "Calderon",
+      "id": 2,
+      "password": "$2a$10$bkXcjZF9vuSFp8k88e77gOcAvHX1AIWDXdt8NpZytTlFIkHYk2DNm"
+    },
+    {
+      "email": "zirydysem@mailinator.com",
+      "password": "$2a$10$RFZX1uOOQusivNg6jRabFuOs4HMBadbhmh5frwb36UjJ6SyoEVx3K",
+      "firstName": "Anjolie",
+      "lastName": "Rodriguez",
+      "id": 3
+    },
+    {
+      "email": "nyfunaso@mailinator.com",
+      "password": "$2a$10$ZZ..dHgMStRiB6d972GPiuh9g8tPAVp1mPmzZhxKRZXObBendPSqq",
+      "firstName": "Ann",
+      "lastName": "Weber",
+      "id": 4
+    },
+    {
+      "email": "mozuf@mailinator.com",
+      "password": "$2a$10$4CAwPb/yquOQEbHcq6Nwz.dLAXPEcYmvx4qFkhoKMtULyGrJv3V8W",
+      "firstName": "Jackson",
+      "lastName": "Malone",
+      "id": 5
+    },
+    {
+      "email": "qasana@mailinator.com",
+      "password": "$2a$10$llvG0gHSsYQDuys7BfjMIe/ck8W7ur.Xa/PL6wDmPi7UxoJylBpKy",
+      "firstName": "Ulric",
+      "lastName": "Wooten",
+      "id": 6
+    },
+    {
+      "email": "coqifiwit@mailinator.com",
+      "password": "$2a$10$xYDFH0Pl6G3EyLjVC/yB8e6GNHVVQD4PmKqkHKdr/.dUMjo2nQXdm",
+      "firstName": "Driscoll",
+      "lastName": "Hull",
+      "id": 7
+    },
+    {
+      "email": "matebyk@mailinator.com",
+      "password": "$2a$10$ADGTstaybILmuxPiSICqS.mVYUNdCI95Sm02eP8fdnRV4R/mish52",
+      "firstName": "Erasmus",
+      "lastName": "Robles",
+      "id": 8
+    }
+  ],
+  "posts": []
+}

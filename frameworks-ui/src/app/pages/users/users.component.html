@@ -1,0 +1,7 @@
+<ng-container *ngIf="users">
+  <div class="row g-3">
+    <div class="col-4" *ngFor="let user of users">
+      <app-card [user]="user"></app-card>
+    </div>
+  </div>
+</ng-container>

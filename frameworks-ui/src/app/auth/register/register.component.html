@@ -1,0 +1,65 @@
+<div class="row">
+  <div class="col-6 mx-auto">
+    <form [formGroup]="registerForm" (submit)="register()">
+      <div class="mb-3">
+        <label class="mb-1" for="name">Name:</label>
+        <input
+          id="firstName"
+          type="text"
+          class="form-control"
+          placeholder="Insert your name"
+          formControlName="firstName"
+        />
+      </div>
+      <div class="mb-3">
+        <label class="mb-1" for="lastName">Surname:</label>
+        <input
+          id="lastName"
+          type="text"
+          class="form-control"
+          placeholder="Insert your surname"
+          formControlName="lastName"
+        />
+      </div>
+      <div class="mb-3">
+        <label class="mb-1" for="email">Email:</label>
+        <input
+          id="email"
+          type="text"
+          class="form-control"
+          placeholder="Insert your email"
+          formControlName="email"
+        />
+      </div>
+      <div class="mb-3">
+        <label class="mb-1" for="password">Password:</label>
+        <input
+          id="password"
+          type="password"
+          class="form-control"
+          placeholder="Insert your password"
+          formControlName="password"
+        />
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <button class="btn btn-primary btn-sm">Register</button>
+        </div>
+        <ng-container *ngIf="message">
+          <div class="col-6">
+            <div
+              [ngClass]="{
+                'alert-success': isSuccess,
+                'alert-danger': !isSuccess
+              }"
+              class="alert p-1 text-center"
+              role="alert"
+            >
+              {{ message }}
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </form>
+  </div>
+</div>
