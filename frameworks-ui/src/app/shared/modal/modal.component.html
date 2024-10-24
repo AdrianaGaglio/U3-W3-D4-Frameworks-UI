@@ -1,0 +1,33 @@
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Add new post</h4>
+    <button
+      type="button"
+      class="btn-close"
+      aria-label="Close"
+      (click)="modal.dismiss('Cross click')"
+    ></button>
+  </div>
+  <div class="modal-body">
+    <ng-content select="[slot='body']"></ng-content>
+  </div>
+  <div class="modal-footer">
+    <button
+      type="button"
+      class="btn btn-danger"
+      (click)="modal.close('Close click')"
+    >
+      Close
+    </button>
+    <button type="button" class="btn btn-success" (click)="addPost()">
+      Add new post
+    </button>
+  </div>
+</ng-template>
+
+<button
+  class="btn btn-outline-primary mb-2 me-2"
+  (click)="openVerticallyCentered(content)"
+>
+  <ng-content select="[slot='button']"></ng-content>
+</button>

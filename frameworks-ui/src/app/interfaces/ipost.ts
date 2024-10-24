@@ -1,7 +1,7 @@
 export interface iPost {
+  id: number;
   title: string;
   description: string;
-  image: string;
   userid: number;
-  username: string;
+  email: string;
 }

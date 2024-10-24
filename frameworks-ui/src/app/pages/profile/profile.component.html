@@ -4,11 +4,11 @@
     <div class="col-12">
       <h3>Your access data:</h3>
     </div>
-    <div class="row py-1">
+    <div class="row py-3">
       <div class="col-3">Email:</div>
       <div class="col-9">{{ user.email }}</div>
     </div>
-    <div class="row py-1">
+    <div class="row py-3">
       <div class="col-3">Password:</div>
       <div class="col-9 d-flex align-items-center">
         <ng-container *ngIf="!isChange">
@@ -44,14 +44,17 @@
       </div>
     </div>
   </div>
-  <div class="row">
+  <div class="row py-3">
     <div class="col-6">
       <h5>Your post:</h5>
     </div>
     <div class="col-6 text-end">
-      <button class="btn btn-primary btn-sm" (click)="createPost()">
-        Add new post
-      </button>
+      <modal-component>
+        <ng-content slot="button">Add new post</ng-content>
+        <ng-content slot="body">
+          <app-newpost></app-newpost>
+        </ng-content>
+      </modal-component>
     </div>
   </div>
 </div>
